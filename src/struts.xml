@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="sentimentclassification" extends="struts-default">
+	<default-action-ref name="index" />
+		<action name="index">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="getLabelAction" class="cn.edu.thu.action.ClassifyAction"
+			method="getResult">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+	</package>
+</struts>
